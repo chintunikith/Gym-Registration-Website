@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Centre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Hurricane&display=swap" rel="stylesheet">
+    <!-- the above link is for google font -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!--CSS denotes the css folder name so created and style.css denotes the file name    -->
+    <style>
+        body {
+            /* css reset [below two code lines] */
+            margin: 0px;
+            padding: 0px;
+            background: url('img/pexels-anush-gorak-1431282.jpg');
+            /* inserting background image on the body using url function as shown and we should dentos the path of the image in single quotes as shown where img represents folder name and remaining represents file name   */
+            /* the code from begin to end is code that makes bacground image of the body of the website more fit to the screen  */
+            /* code begins here */
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* code ends here */
+
+            color: white;
+            /* whole text that is written in body will be white */
+            font-family: 'Baloo Bhaina 2', cursive;
+            /* the above is associated with google font */
+            font-size: 9px;
+
+        }
+
+        .left {
+            /* border: 2px solid red; */
+            /* the above line code is used for testing */
+            display: inline-block;
+            /* to make this div as inline element form block element so that it comes to LHS */
+            position: absolute;
+            left: 34px;
+            top: 20px;
+            /* margin in mid div works same as top in left and right divs so to maintain uniformity the values are given same  */
+            /* one imp point is that we can do positioning of these divs even by using float property also */
+            text-align: center;
+            /* to make "the gym" text at exactly centre */
+
+        }
+
+        .left img {
+            width: 142px;
+            height: 111px;
+            /* giving height and width to the logo image */
+            /* once uncomment 35th and 36th line  */
+        }
+
+        .mid {
+            /* border: 2px solid green; */
+            /* the above line code is used for testing */
+            display: block;
+            width: 35%;
+            margin: 20px auto;
+            /* to bring any div into centre you should set 1)display:block-size: 2)width and 3)margin in x-axis as shown above */
+
+
+
+        }
+
+        .right {
+            /* border: 2px solid yellow; */
+            /* the above line code is used for testing */
+            display: inline-block;
+            /* to make this div as inline element form block element so that it comes to RHS */
+            position: absolute;
+            right: 34px;
+            top: 20px;
+            /* moving so converted/created inline right div element to the RHS  */
+        }
+
+        .navbar li {
+            display: inline-block;
+            /* 54th line code is to make the options in mid div horizontal from verical */
+        }
+
+        .navbar li a {
+            color: white;
+            /* to change the options text colour to white */
+            text-decoration: none;
+            /* to remove underlines of options in navbar  */
+            padding: 34px 20px;
+            /* to create some gap between options in navbar uncomment 62th line for more clarity */
+            font-size: 16px;
+            /* sizing the font of options in navbar */
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            text-decoration: underline;
+            /* when the mousepointer is taken on a particular option its gets underlined and since the class of home is active,home will be always underlined */
+            color: rgb(155, 212, 23);
+            /* when the mousepointer is taken on a particular option its gets rgb color and since the class of home is active,home will always be of rgb color */
+
+        }
+
+        .btn {
+            margin: 0px 9px;
+            background-color: black;
+            /* button color */
+            color: white;
+            /* color of text inside button */
+            padding: 4px 10px;
+            /* for any website adjust padding and margin from by seeing live in chrome */
+            border: 2px solid grey;
+            /* giving border to the button itself */
+            border-radius: 10px;
+            /* giving border radius to the button */
+            font-size: 17px;
+            /* giving fontsize to the text inside the button */
+            font-family: 'Baloo Bhaina 2', cursive;
+            /* setting the font for the text in the button */
+        }
+
+        .btn:hover {
+            background-color: rgb(31, 30, 30);
+        }
+
+        #thegymtext {
+            font-size: 30px;
+            /* setting the fontsize if the 'the gym' text under logo on LHS */
+            line-height: 43px;
+            /* controls the space between logo and the text below it  */
+        }
+
+        .container {
+            /* border: 2px solid white; */
+            /* the above line code is used for testing */
+            /* margin: 98px 75px; */
+            /* the above given margin is video[harry's] creation */
+            padding: 54px 18px;
+            width: 33%;
+            /* this container occupies 33% of your screen length */
+            border-radius: 16px;
+            margin: 372px -48px;
+            /* the above creation is my own creation on trail and error basis using chrome tools  uncomment it to see the different output*/
+
+        }
+
+        .namaste {
+            text-align: center;
+            /* the text inside the filler box will be aligned at centre */
+            display: block;
+            width: 287px;
+            margin: 8px auto;
+            /* i am eligible to give margin auto bcoz i have already gave display-block and width-5px */
+            padding: 4px;
+            border: 2px solid pink;
+            border-radius: 9px;
+            font-family: 'Baloo Bhaina 2', cursive;
+        }
+
+        #submitid {
+            margin: 9px 193px;
+        }
+
+        .formheading {
+            margin: 61px;
+            font-size: 19px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <!-- I am left -->
+            <!-- the above line is used for testing -->
+            <img src="img/Fitness-Gym-logo-design-template-on-transparent-background-PNG.png" alt="" srcset="">
+            <!-- to insert gym logo on left div use img src tag-->
+            <div id="thegymtext">
+                The Gym
+            </div>
+        </div>
+        <!-- left box for logo -->
+        <div class="mid">
+            <!-- I am mid -->
+            <!-- the above line is used for testing -->
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+
+            </ul>
+        </div>
+        <!-- mid box for navigation bar -->
+        <div class="right">
+            <!-- I am right -->
+            <!-- the above code line is for testing -->
+            <button class="btn">Call Us</button>
+            <button class="btn">Email Us</button>
+        </div>
+        <!-- right box for buttons  -->
+    </header>
+    <br>
+    <div class="container">
+        <h1 class="formheading">
+            Join The Best Gym In Kurnool Now
+        </h1>
+        <form action="noaction.php">
+            <div class="formgroup">
+                <input type="text" name="" placeholder="Enter your Name" class="namaste">
+            </div>
+            <div class="formgroup">
+                <input type="text" name="" placeholder="Enter your Age" class="namaste">
+            </div>
+            <div class="formgroup">
+                <input type="text" name="" placeholder="Enter your Gender" class="namaste">
+            </div>
+            <div class="formgroup">
+                <input type="text" name="" placeholder="Enter your Locality" class="namaste">
+            </div>
+            <!-- here input tag is used to take input of any type like name,age etc -->
+            <!-- in form 'noaction.php' is just like a backend php file in which the enter data is stored and processed -->
+            <!-- usually form tag is used to link the frontend with backend so even if you remove form tag no change will be noticed once uncomment the form tag if you want -->
+            <button class="btn" id="submitid">
+                Submit
+            </button>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and text shadow</title>
+    <style>
+        .container {
+            display: flex;
+            /* made into flex elements */
+            /* the default value of direction in display flex is 'row' direction */
+
+        }
+
+        .card {
+            padding: 23px 33px;
+            /* border: 2px solid red; */
+            /* border is set for our conveinence while styling */
+            margin: 23px 12px;
+            background-color: khaki;
+            box-shadow: 13px 10px red;
+            /* the above line code is used to add shadow,once uncomment it to notice the difference */
+            box-shadow: -13px -10px red;
+            /* negative value also can be given,just uncomment to notice the difference between + and - values */
+            box-shadow: -13px -10px 8px red;
+            /* here 8px is blurr radius [chamki like look] and 8px is known as 'blurr-radius' */
+            box-shadow: -13px -10px 8px 14px red;
+            /* here 14px is known as spread radius */
+            /* box-shadow: offset-x offset-y blurr-radius spread-radius; */
+        /* ================================================ */
+        /* to get shadow inside the box */
+         box-shadow: inset 13px 23px red ;
+         /* inset represents inside the box */
+        }
+        .card h2{
+             text-shadow: 3px 4px green;
+             /* apply's shadow to the text */
+             text-shadow: 3px 4px 5px green;
+             /* 5px is blurr radius[chamki effect] */
+             /* in the same way we can use -ve values as well */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>This is C++ course</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit dicta sequi ullam numquam, quibusdam
+                velit modi exercitationem nisi possimus ducimus necessitatibus quos nobis aut quas impedit excepturi
+                atque dignissimos adipisci!
+            </p>
+
+        </div>
+        <div class="card" id="card-2">
+            <h2>This is HTML course</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit dicta sequi ullam numquam, quibusdam
+                velit modi exercitationem nisi possimus ducimus necessitatibus quos nobis aut quas impedit excepturi
+                atque dignissimos adipisci!
+            </p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>This is JAVA course</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit dicta sequi ullam numquam, quibusdam
+                velit modi exercitationem nisi possimus ducimus necessitatibus quos nobis aut quas impedit excepturi
+                atque dignissimos adipisci!
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
